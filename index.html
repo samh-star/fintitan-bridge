@@ -32,29 +32,16 @@
         .hero {
             background: #0f1a3a;
             color: #fff;
-            padding: 100px 0 80px;
+            padding: 120px 0 100px;
             text-align: center;
         }
 
-        .hero-badge {
-            display: inline-block;
-            border: 1px solid rgba(201, 162, 39, 0.4);
-            color: #c9a227;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 8px 20px;
-            border-radius: 4px;
-            margin-bottom: 32px;
-        }
-
         .hero h1 {
-            font-size: 36px;
+            font-size: 34px;
             font-weight: 700;
-            line-height: 1.25;
+            line-height: 1.3;
             margin-bottom: 24px;
-            max-width: 540px;
+            max-width: 560px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -89,19 +76,9 @@
             background: #d4b43a;
         }
 
-        .btn-outline {
-            background: transparent;
-            border: 1px solid rgba(201, 162, 39, 0.5);
-            color: #c9a227;
-        }
-
-        .btn-outline:hover {
-            background: rgba(201, 162, 39, 0.08);
-        }
-
         /* Sections */
         .section {
-            padding: 80px 0;
+            padding: 100px 0;
         }
 
         .section-alt {
@@ -125,16 +102,16 @@
             margin-bottom: 0;
         }
 
-        /* Highlight box */
-        .highlight {
+        /* Clarification box */
+        .clarify {
             background: #f0f3f8;
             border-left: 3px solid #c9a227;
             padding: 24px 28px;
-            margin: 28px 0;
+            margin: 32px 0 0;
             border-radius: 0 8px 8px 0;
         }
 
-        .highlight p {
+        .clarify p {
             font-size: 16px;
             color: #3a3a4a;
             margin: 0;
@@ -144,11 +121,11 @@
         .simple-list {
             list-style: none;
             padding: 0;
-            margin: 24px 0;
+            margin: 24px 0 0;
         }
 
         .simple-list li {
-            padding: 12px 0 12px 32px;
+            padding: 14px 0 14px 32px;
             position: relative;
             font-size: 17px;
             color: #4a4a5a;
@@ -163,7 +140,7 @@
             content: "";
             position: absolute;
             left: 0;
-            top: 20px;
+            top: 22px;
             width: 8px;
             height: 8px;
             background: #c9a227;
@@ -174,7 +151,7 @@
         .steps {
             display: flex;
             flex-direction: column;
-            gap: 32px;
+            gap: 36px;
             margin-top: 32px;
         }
 
@@ -214,7 +191,7 @@
         /* Form Section */
         .form-section {
             background: #0f1a3a;
-            padding: 80px 0;
+            padding: 100px 0;
         }
 
         .form-section h2 {
@@ -234,13 +211,13 @@
         .form-card {
             background: #fff;
             border-radius: 12px;
-            padding: 40px;
+            padding: 44px;
             max-width: 480px;
             margin: 0 auto;
         }
 
         .form-group {
-            margin-bottom: 24px;
+            margin-bottom: 28px;
         }
 
         .form-group label {
@@ -312,14 +289,12 @@
             margin-top: 8px;
         }
 
-        .form-disclaimer {
+        .form-note {
             margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #e8eaee;
             text-align: center;
         }
 
-        .form-disclaimer p {
+        .form-note p {
             font-size: 12px;
             color: #8a8a9a;
             line-height: 1.6;
@@ -347,6 +322,7 @@
             justify-content: center;
             margin: 0 auto 20px;
             font-size: 24px;
+            color: #0f1a3a;
         }
 
         .confirmation h3 {
@@ -372,11 +348,11 @@
         /* Mobile */
         @media (max-width: 600px) {
             .hero {
-                padding: 72px 0 60px;
+                padding: 80px 0 64px;
             }
 
             .hero h1 {
-                font-size: 28px;
+                font-size: 26px;
             }
 
             .hero p {
@@ -384,7 +360,7 @@
             }
 
             .section {
-                padding: 56px 0;
+                padding: 64px 0;
             }
 
             .section h2 {
@@ -406,20 +382,19 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <div class="hero-badge">For Restaurant Owners</div>
-            <h1>An Employer FICA Tip Credit May Be <span>Worth Reviewing</span></h1>
-            <p>If your restaurant has tipped employees, there may be a federal employer tax credit opportunity connected to certain reported tips.</p>
-            <a href="#what-is" class="btn btn-outline">See How It Works</a>
+            <h1>Restaurant Owners: An Employer FICA Tip Credit May Be <span>Worth Reviewing</span></h1>
+            <p>If your restaurant has tipped employees, there may be a federal employer tax-credit opportunity connected to certain reported tips.</p>
+            <a href="#what-is" class="btn">See How It Works</a>
         </div>
     </section>
 
     <!-- What Is This? -->
     <section class="section" id="what-is">
         <div class="container">
-            <h2>What Is This?</h2>
-            <p>This is a possible employer FICA Tip Credit opportunity. It relates to qualifying employee tips and the employer share of Social Security and Medicare taxes that certain restaurants and hospitality businesses pay on those tips.</p>
+            <h2>What Is the FICA Tip Credit?</h2>
+            <p>The FICA Tip Credit is a federal employer tax credit that may apply to certain restaurants and hospitality businesses that pay the employer share of Social Security and Medicare taxes on qualifying employee tips.</p>
 
-            <div class="highlight">
+            <div class="clarify">
                 <p><strong>This is an employer credit for the business.</strong> It is not a personal credit or refund for servers or tipped employees.</p>
             </div>
         </div>
@@ -429,6 +404,7 @@
     <section class="section section-alt">
         <div class="container">
             <h2>Could This Be Relevant to Your Restaurant?</h2>
+            <p>This may be worth reviewing if your business fits one or more of these general descriptions.</p>
             <ul class="simple-list">
                 <li>Restaurants with tipped employees</li>
                 <li>Businesses that report tips through payroll</li>
@@ -442,8 +418,8 @@
     <section class="section">
         <div class="container">
             <h2>You Do Not Have to Figure This Out Yourself</h2>
-            <p>FinTitan's team — not this page — will determine whether this opportunity may apply to your business. They handle the actual qualification review and explain what the next step looks like.</p>
-            <p>This page simply helps you learn a bit more and decide whether to connect with them.</p>
+            <p>You do not need to understand tax forms or decide whether your restaurant qualifies before taking the next step.</p>
+            <p>FinTitan's team handles the actual qualification review and can explain whether this opportunity may apply to your business.</p>
         </div>
     </section>
 
@@ -480,7 +456,7 @@
     <!-- Form -->
     <section class="form-section" id="form">
         <div class="container">
-            <h2>Get Started</h2>
+            <h2>See Whether This May Be Worth Reviewing</h2>
             <p>Share a few details and we'll point you to the next step.</p>
 
             <div class="form-card" id="formCard">
@@ -515,7 +491,7 @@
 
                     <button type="submit" class="btn">Continue to Learn More</button>
 
-                    <div class="form-disclaimer">
+                    <div class="form-note">
                         <p>FinTitan's team determines eligibility. This page does not provide tax advice.</p>
                     </div>
                 </form>
