@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinTitan FICA Tip Tax Credit - Free Qualification Review</title>
+    <title>FICA Tip Credit Review — Restaurant Owners</title>
     <style>
         * {
             margin: 0;
@@ -12,712 +12,481 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
+            color: #1a1a2e;
+            background: #f8f9fa;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 720px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
         /* Header */
         .header {
-            background: #1a2744;
-            padding: 15px 0;
+            background: #1a1a2e;
+            padding: 40px 0;
             text-align: center;
         }
 
-        .header img {
-            height: 50px;
-        }
-
-        .irs-badge {
+        .header-badge {
             display: inline-block;
-            background: #d4a843;
-            color: #1a2744;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-top: 10px;
+            background: #c9a227;
+            color: #1a1a2e;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            padding: 6px 16px;
+            border-radius: 4px;
+            margin-bottom: 20px;
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1a2744 0%, #2a3a5c 100%);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
+        .header h1 {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 12px;
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .header h1 span {
+            color: #c9a227;
         }
 
-        .hero h1 span {
-            color: #d4a843;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        .hero-cta {
-            display: inline-block;
-            background: #d4a843;
-            color: #1a2744;
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
-
-        .hero-cta:hover {
-            background: #c49a3a;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-        }
-
-        /* Recovery Example */
-        .recovery-example {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 400px;
-            margin: 30px auto 0;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-        }
-
-        .recovery-example p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .recovery-example .amount {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #1a2744;
-        }
-
-        .recovery-example .amount span {
-            color: #d4a843;
-        }
-
-        /* Trust Bar */
-        .trust-bar {
-            background: #d4a843;
-            padding: 30px 0;
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            text-align: center;
-        }
-
-        .trust-item h3 {
-            color: #1a2744;
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-
-        .trust-item p {
-            color: #1a2744;
-            font-size: 0.9rem;
-            opacity: 0.8;
+        .header p {
+            color: #a0a0b0;
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto;
         }
 
         /* Main Content */
-        .main-content {
-            background: white;
-            padding: 60px 0;
+        .main {
+            padding: 48px 0;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: #1a2744;
-            margin-bottom: 40px;
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
-        .section-title span {
-            color: #d4a843;
+        .card h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1a1a2e;
         }
 
-        /* Benefits Grid */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-bottom: 60px;
+        .card p {
+            color: #4a4a5a;
+            margin-bottom: 12px;
         }
 
-        .benefit-card {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            border-top: 4px solid #d4a843;
+        .card p:last-child {
+            margin-bottom: 0;
         }
 
-        .benefit-card .icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .benefit-card h3 {
-            color: #1a2744;
-            margin-bottom: 10px;
-        }
-
-        .benefit-card p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-
-        /* Who It's For */
-        .who-for {
-            background: #1a2744;
-            color: white;
-            padding: 40px;
-            border-radius: 10px;
-            margin-bottom: 60px;
-        }
-
-        .who-for h3 {
-            color: #d4a843;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
-
-        .who-for ul {
+        /* Who This Is For */
+        .fit-list {
             list-style: none;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+            padding: 0;
         }
 
-        .who-for li {
-            padding: 10px 0;
-            padding-left: 30px;
+        .fit-list li {
+            padding: 10px 0 10px 32px;
             position: relative;
+            color: #4a4a5a;
+            border-bottom: 1px solid #f0f0f0;
         }
 
-        .who-for li::before {
+        .fit-list li:last-child {
+            border-bottom: none;
+        }
+
+        .fit-list li::before {
             content: "✓";
             position: absolute;
             left: 0;
-            color: #d4a843;
-            font-weight: bold;
+            color: #c9a227;
+            font-weight: 700;
         }
 
-        /* Process */
-        .process-grid {
+        /* How It Works */
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .step-number {
+            width: 36px;
+            height: 36px;
+            background: #1a1a2e;
+            color: #c9a227;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #1a1a2e;
+        }
+
+        .step-content p {
+            font-size: 14px;
+            color: #6a6a7a;
+            margin: 0;
+        }
+
+        /* Trust Badges */
+        .trust-bar {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .process-step {
+            gap: 16px;
             text-align: center;
-            padding: 30px;
         }
 
-        .process-step .step-number {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background: #d4a843;
-            color: #1a2744;
-            border-radius: 50%;
-            line-height: 50px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 15px;
+        .trust-item {
+            padding: 16px 8px;
         }
 
-        .process-step h3 {
-            color: #1a2744;
-            margin-bottom: 10px;
+        .trust-item strong {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .process-step p {
-            color: #666;
+        .trust-item span {
+            font-size: 12px;
+            color: #7a7a8a;
         }
 
-        /* Questionnaire Section */
-        .questionnaire {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 60px 0;
+        /* Form Section */
+        .form-section {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 40px 32px;
+            text-align: center;
         }
 
-        .questionnaire-form {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+        .form-section h2 {
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .form-section > p {
+            color: #a0a0b0;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .form-note {
+            background: rgba(201, 162, 39, 0.1);
+            border: 1px solid rgba(201, 162, 39, 0.3);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .form-note p {
+            color: #c9a227;
+            font-size: 13px;
+            margin: 0;
+            line-height: 1.5;
         }
 
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 16px;
+            text-align: left;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 8px;
-            color: #1a2744;
-            font-weight: 600;
+            color: #c0c0d0;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 6px;
         }
 
         .form-group input,
-        .form-group select,
-        .form-group textarea {
+        .form-group select {
             width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
+            padding: 12px 14px;
+            border: 1px solid #3a3a4a;
+            border-radius: 6px;
+            background: #252538;
+            color: #fff;
+            font-size: 15px;
+            transition: border-color 0.2s;
         }
 
         .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
+        .form-group select:focus {
             outline: none;
-            border-color: #d4a843;
+            border-color: #c9a227;
+        }
+
+        .form-group input::placeholder {
+            color: #6a6a7a;
         }
 
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 12px;
         }
 
-        .checkbox-group {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-        }
-
-        .checkbox-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .checkbox-item input[type="checkbox"] {
-            width: auto;
-        }
-
-        .submit-btn {
-            display: block;
+        .btn {
+            display: inline-block;
             width: 100%;
-            background: #d4a843;
-            color: #1a2744;
-            padding: 15px;
-            font-size: 1.1rem;
-            font-weight: bold;
+            padding: 16px 24px;
+            background: #c9a227;
+            color: #1a1a2e;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
+            transition: background 0.2s, transform 0.1s;
+            margin-top: 8px;
         }
 
-        .submit-btn:hover {
-            background: #c49a3a;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        .btn:hover {
+            background: #d4b43a;
         }
 
-        /* Social Proof */
-        .social-proof {
-            background: #1a2744;
-            color: white;
-            padding: 60px 0;
-            text-align: center;
+        .btn:active {
+            transform: translateY(1px);
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-top: 30px;
+        /* Disclaimer */
+        .disclaimer {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #3a3a4a;
         }
 
-        .stat-item h3 {
-            font-size: 2.5rem;
-            color: #d4a843;
-            margin-bottom: 5px;
-        }
-
-        .stat-item p {
-            opacity: 0.8;
+        .disclaimer p {
+            color: #6a6a7a;
+            font-size: 11px;
+            line-height: 1.6;
+            margin: 0;
         }
 
         /* Footer */
         .footer {
-            background: #0f1929;
-            color: white;
-            padding: 30px 0;
             text-align: center;
+            padding: 32px 0;
+            color: #8a8a9a;
+            font-size: 12px;
         }
 
-        .footer p {
-            opacity: 0.6;
-            font-size: 0.9rem;
+        .footer a {
+            color: #6a6a8a;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+        /* Mobile */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 26px;
             }
 
-            .trust-grid,
-            .benefits-grid,
-            .process-grid,
-            .stats-grid {
+            .trust-bar {
                 grid-template-columns: 1fr;
+                gap: 0;
             }
 
-            .who-for ul {
-                grid-template-columns: 1fr;
+            .trust-item {
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .trust-item:last-child {
+                border-bottom: none;
             }
 
             .form-row {
                 grid-template-columns: 1fr;
             }
 
-            .checkbox-group {
-                grid-template-columns: 1fr;
+            .card {
+                padding: 24px;
             }
         }
     </style>
 </head>
 <body>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <img src="https://fintitan.com/images/gold-logo.png" alt="FinTitan">
-            <div class="irs-badge">IRS Section 45B FICA Tip Credit</div>
+            <div class="header-badge">IRS Section 45B FICA Tip Credit</div>
+            <h1>Is Your Restaurant Missing Out on <span>FICA Tip Credits?</span></h1>
+            <p>A brief, no-cost review to see if your business may qualify for an employer tax credit you may have overlooked.</p>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>You May Be Owed<br><span>FICA Tip Tax Credits</span></h1>
-            <p class="hero-subtitle">For bars, restaurants, night clubs, and hospitality businesses with tipped employees</p>
-            <a href="#questionnaire" class="hero-cta">Free Qualification Review</a>
-            
-            <div class="recovery-example">
-                <p>Example recovery potential</p>
-                <p class="amount"><span>$</span>107,100</p>
-                <p>possible recovery</p>
-                <p style="font-size: 0.8rem; color: #999; margin-top: 10px;">Based on $500K in annual tips</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Bar -->
-    <section class="trust-bar">
-        <div class="container">
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <h3>NO COST</h3>
-                    <p>To find out if you qualify</p>
-                </div>
-                <div class="trust-item">
-                    <h3>NO REFUND OR CREDIT</h3>
-                    <p>No risk to your business</p>
-                </div>
-                <div class="trust-item">
-                    <h3>DEFER PAYMENT</h3>
-                    <p>Until you receive your credit</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Main Content -->
-    <section class="main-content">
+    <main class="main">
         <div class="container">
-            <h2 class="section-title">Turn Reported Tips Into <span>Recovered Capital</span></h2>
-            
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: #666;">
-                The FICA Tip Credit is a dollar-for-dollar federal tax credit for qualifying food and beverage employers that paid the employer share of Social Security and Medicare taxes on employee tips.
-            </p>
 
-            <!-- Benefits -->
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="icon">🍽️</div>
-                    <h3>Built for Tipped Teams</h3>
-                    <p>Designed for restaurants, bars, clubs, caterers, hotels, and more</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="icon">📅</div>
-                    <h3>Recover Missed Years</h3>
-                    <p>Review the current year and amend prior returns when eligible</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="icon">✅</div>
-                    <h3>CPA-Friendly Filing</h3>
-                    <p>45(B) tax preparers and filing support to ensure compliance</p>
-                </div>
+            <!-- What This Is -->
+            <div class="card">
+                <h2>What This Is</h2>
+                <p>The FICA Tip Credit (IRS Section 45B) is a federal tax credit available to certain employers in the food and beverage industry. If your business pays the employer share of Social Security and Medicare taxes on employee-reported tips, you may be eligible.</p>
+                <p><strong>This is a business tax credit — not a personal tax credit for individual employees.</strong> It concerns taxes your business has already paid, and it may apply to the current year plus prior tax years.</p>
+                <p>FinTitan's team specializes in this credit and can review your situation at no upfront cost to see if you qualify.</p>
             </div>
 
-            <!-- Who It's For -->
-            <div class="who-for">
-                <h3>Strong Fit For:</h3>
-                <ul>
-                    <li>Full-service restaurants</li>
-                    <li>Bars and night clubs</li>
-                    <li>Tipped food and beverage teams</li>
-                    <li>Multi-location hospitality groups</li>
+            <!-- Who This Is For -->
+            <div class="card">
+                <h2>Who This Is For</h2>
+                <ul class="fit-list">
+                    <li>Full-service restaurants with tipped staff</li>
+                    <li>Bars, nightclubs, and lounges</li>
+                    <li>Catering companies and event venues</li>
+                    <li>Hotels and resorts with food & beverage operations</li>
+                    <li>Multi-location restaurant groups</li>
+                    <li>Any employer that pays FICA taxes on reported tips</li>
                 </ul>
             </div>
 
-            <!-- Process -->
-            <h2 class="section-title">Simple <span>3-Step Process</span></h2>
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Review Payroll & Tip Records</h3>
-                    <p>We analyze your existing records to identify qualifying tips</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Prepare Form 8846 Support</h3>
-                    <p>Our specialists handle all documentation and IRS forms</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Claim Eligible Refund or Credit</h3>
-                    <p>Receive your credit with full audit protection</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Questionnaire Section -->
-    <section class="questionnaire" id="questionnaire">
-        <div class="container">
-            <h2 class="section-title">Get Your <span>Free Qualification Review</span></h2>
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 40px; color: #666;">
-                You do not need to know if you qualify before you start. A quick review can begin with existing business records. No fees until you know what applies and what may be recoverable.
-            </p>
-
-            <form class="questionnaire-form" action="https://fintitan.com/services/fica-tip-credit/schedule?referrer=SAM_HARDING" method="GET">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="firstName">First Name *</label>
-                        <input type="text" id="firstName" name="firstName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="lastName">Last Name *</label>
-                        <input type="text" id="lastName" name="lastName" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="businessName">Business Name *</label>
-                    <input type="text" id="businessName" name="businessName" required>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="state">State *</label>
-                        <select id="state" name="state" required>
-                            <option value="">Select State</option>
-                            <option value="AL">Alabama</option>
-                            <option value="AK">Alaska</option>
-                            <option value="AZ">Arizona</option>
-                            <option value="AR">Arkansas</option>
-                            <option value="CA">California</option>
-                            <option value="CO">Colorado</option>
-                            <option value="CT">Connecticut</option>
-                            <option value="DE">Delaware</option>
-                            <option value="FL">Florida</option>
-                            <option value="GA">Georgia</option>
-                            <option value="HI">Hawaii</option>
-                            <option value="ID">Idaho</option>
-                            <option value="IL">Illinois</option>
-                            <option value="IN">Indiana</option>
-                            <option value="IA">Iowa</option>
-                            <option value="KS">Kansas</option>
-                            <option value="KY">Kentucky</option>
-                            <option value="LA">Louisiana</option>
-                            <option value="ME">Maine</option>
-                            <option value="MD">Maryland</option>
-                            <option value="MA">Massachusetts</option>
-                            <option value="MI">Michigan</option>
-                            <option value="MN">Minnesota</option>
-                            <option value="MS">Mississippi</option>
-                            <option value="MO">Missouri</option>
-                            <option value="MT">Montana</option>
-                            <option value="NE">Nebraska</option>
-                            <option value="NV">Nevada</option>
-                            <option value="NH">New Hampshire</option>
-                            <option value="NJ">New Jersey</option>
-                            <option value="NM">New Mexico</option>
-                            <option value="NY">New York</option>
-                            <option value="NC">North Carolina</option>
-                            <option value="ND">North Dakota</option>
-                            <option value="OH">Ohio</option>
-                            <option value="OK">Oklahoma</option>
-                            <option value="OR">Oregon</option>
-                            <option value="PA">Pennsylvania</option>
-                            <option value="RI">Rhode Island</option>
-                            <option value="SC">South Carolina</option>
-                            <option value="SD">South Dakota</option>
-                            <option value="TN">Tennessee</option>
-                            <option value="TX">Texas</option>
-                            <option value="UT">Utah</option>
-                            <option value="VT">Vermont</option>
-                            <option value="VA">Virginia</option>
-                            <option value="WA">Washington</option>
-                            <option value="WV">West Virginia</option>
-                            <option value="WI">Wisconsin</option>
-                            <option value="WY">Wyoming</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="locations">Number of Locations *</label>
-                        <select id="locations" name="locations" required>
-                            <option value="">Select</option>
-                            <option value="1">1</option>
-                            <option value="2-5">2-5</option>
-                            <option value="6-10">6-10</option>
-                            <option value="11+">11+</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="industry">Industry *</label>
-                    <select id="industry" name="industry" required>
-                        <option value="">Select Industry</option>
-                        <option value="restaurant">Full-Service Restaurant</option>
-                        <option value="bar">Bar / Night Club</option>
-                        <option value="casual">Casual Dining</option>
-                        <option value="catering">Catering</option>
-                        <option value="hotel">Hotel / Hospitality</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Do you have tipped employees? *</label>
-                    <div class="checkbox-group">
-                        <div class="checkbox-item">
-                            <input type="radio" id="tipped-yes" name="tipped" value="yes" required>
-                            <label for="tipped-yes">Yes</label>
+            <!-- How It Works -->
+            <div class="card">
+                <h2>How the Review Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Quick Info Check</h3>
+                            <p>You share a few basics about your business below. Takes about 60 seconds.</p>
                         </div>
-                        <div class="checkbox-item">
-                            <input type="radio" id="tipped-no" name="tipped" value="no">
-                            <label for="tipped-no">No</label>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>FinTitan Reviews Your Situation</h3>
+                            <p>Their team evaluates whether your business may qualify based on your payroll and tip records.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>No Cost If You Don't Qualify</h3>
+                            <p>If your business doesn't qualify or no credit is found, there is no cost. Payment can be deferred until any credit is claimed.</p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <label>Approximate annual gross tips (all locations combined):</label>
-                    <select name="annualTips">
-                        <option value="">Select Range</option>
-                        <option value="under100k">Under $100,000</option>
-                        <option value="100k-250k">$100,000 - $250,000</option>
-                        <option value="250k-500k">$250,000 - $500,000</option>
-                        <option value="500k-1m">$500,000 - $1,000,000</option>
-                        <option value="over1m">Over $1,000,000</option>
-                        <option value="unknown">Unknown / Not Sure</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>How did you hear about us?</label>
-                    <select name="source">
-                        <option value="">Select</option>
-                        <option value="referral">Referral</option>
-                        <option value="social">Social Media</option>
-                        <option value="search">Search Engine</option>
-                        <option value="advertisement">Advertisement</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <p style="text-align: center; color: #666; font-size: 0.9rem; margin-bottom: 20px;">
-                    * Your data is secure and never shared. Estimates are non-binding.
-                </p>
-
-                <button type="submit" class="submit-btn">Check My Eligibility Now</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Social Proof -->
-    <section class="social-proof">
-        <div class="container">
-            <h2>Join Thousands of Business Owners Who Have Recovered Millions</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>5000+</h3>
-                    <p>Clients Served</p>
-                </div>
-                <div class="stat-item">
-                    <h3>$500M+</h3>
-                    <p>Recovered</p>
-                </div>
-                <div class="stat-item">
-                    <h3>4.9/5</h3>
-                    <p>Client Rating</p>
-                </div>
-                <div class="stat-item">
-                    <h3>90-120</h3>
-                    <p>Days to Credit</p>
+            <!-- Trust -->
+            <div class="card">
+                <div class="trust-bar">
+                    <div class="trust-item">
+                        <strong>No Cost to Check</strong>
+                        <span>See if you qualify first</span>
+                    </div>
+                    <div class="trust-item">
+                        <strong>No Upfront Payment</strong>
+                        <span>Pay only if credit is claimed</span>
+                    </div>
+                    <div class="trust-item">
+                        <strong>CPA-Friendly</strong>
+                        <span>Works with your tax team</span>
+                    </div>
                 </div>
             </div>
+
+            <!-- Form -->
+            <div class="form-section">
+                <h2>Request Your Free Qualification Review</h2>
+                <p>Fill in a few details and we'll connect you with FinTitan's team.</p>
+
+                <div class="form-note">
+                    <p><strong>Note:</strong> This is not a tax determination. FinTitan will review your specific situation and confirm whether you may qualify. No savings or refund is promised.</p>
+                </div>
+
+                <form action="https://fintitan.com/qualification" method="GET" id="bridgeForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="businessName">Business Name</label>
+                        <input type="text" id="businessName" name="businessName" placeholder="Your Restaurant LLC" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Business Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@yourrestaurant.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="employees">Approximate Number of Tipped Employees</label>
+                        <select id="employees" name="employees" required>
+                            <option value="" disabled selected>Select a range</option>
+                            <option value="1-5">1–5</option>
+                            <option value="6-15">6–15</option>
+                            <option value="16-30">16–30</option>
+                            <option value="31-50">31–50</option>
+                            <option value="51+">51+</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn">Continue to FinTitan Review →</button>
+                </form>
+
+                <div class="disclaimer">
+                    <p>This page is operated by an independent referral partner of FinTitan. FinTitan is a third-party service that provides tax credit analysis and filing support. This is not tax advice. Eligibility and credit amounts are determined by FinTitan's team based on your actual records and tax position. No specific savings, refund, or credit amount is guaranteed.</p>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>FinTitan FICA Tip Credit Services | IRS Section 45B | All rights reserved</p>
-            <p style="margin-top: 10px; font-size: 0.8rem;">This is an independent bridge page. FinTitan is a registered trademark.</p>
+            <p>Referral partner of FinTitan · Not a tax advisor</p>
         </div>
     </footer>
+
 </body>
 </html>
