@@ -249,6 +249,21 @@
             border-color: #c9a227;
         }
 
+        .form-group input.error {
+            border-color: #c0392b;
+        }
+
+        .error-msg {
+            font-size: 13px;
+            color: #c0392b;
+            margin-top: 6px;
+            display: none;
+        }
+
+        .error-msg.show {
+            display: block;
+        }
+
         .form-group input::placeholder {
             color: #9a9aa8;
         }
@@ -451,23 +466,28 @@
                 <form id="leadForm">
                     <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Smith" required>
+                        <input type="text" id="name" name="name" placeholder="John Smith">
+                        <p class="error-msg" id="name-error">Please enter your name.</p>
                     </div>
 
                     <div class="form-group">
                         <label for="restaurant">Restaurant Name</label>
-                        <input type="text" id="restaurant" name="restaurant" placeholder="Your Restaurant" required>
+                        <input type="text" id="restaurant" name="restaurant" placeholder="Your Restaurant">
+                        <p class="error-msg" id="restaurant-error">Please enter your restaurant name.</p>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Best Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="you@yourrestaurant.com" required>
+                        <input type="email" id="email" name="email" placeholder="you@yourrestaurant.com">
+                        <p class="error-msg" id="email-error">Please enter a valid email address.</p>
                     </div>
 
-                    <button type="submit" class="btn">Show Me the Next Step</button>
+                    <p style="font-size: 14px; color: #5a5a6a; margin-bottom: 16px; text-align: center;">Once you fill this out and click below, you'll go to FinTitan's page. Their team will ask for any additional information they need and help you see whether this may be worth pursuing for your restaurant.</p>
+
+                    <button type="submit" class="btn">Continue to FinTitan</button>
 
                     <div class="form-note">
-                        <p>You are not committing to anything by taking this step.</p>
+                        <p>You are not committing to anything by continuing. There is no upfront cost to have them take a look.</p>
                     </div>
 
                     <div class="form-disclosure">
@@ -494,8 +514,46 @@
     <script>
         document.getElementById('leadForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            document.getElementById('leadForm').style.display = 'none';
-            document.getElementById('confirmation').classList.add('show');
+
+            var name = document.getElementById('name');
+            var restaurant = document.getElementById('restaurant');
+            var email = document.getElementById('email');
+            var nameError = document.getElementById('name-error');
+            var restaurantError = document.getElementById('restaurant-error');
+            var emailError = document.getElementById('email-error');
+            var valid = true;
+
+            // Clear previous errors
+            name.classList.remove('error');
+            restaurant.classList.remove('error');
+            email.classList.remove('error');
+            nameError.classList.remove('show');
+            restaurantError.classList.remove('show');
+            emailError.classList.remove('show');
+
+            if (!name.value.trim()) {
+                name.classList.add('error');
+                nameError.classList.add('show');
+                valid = false;
+            }
+
+            if (!restaurant.value.trim()) {
+                restaurant.classList.add('error');
+                restaurantError.classList.add('show');
+                valid = false;
+            }
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.value.trim() || !emailPattern.test(email.value.trim())) {
+                email.classList.add('error');
+                emailError.classList.add('show');
+                valid = false;
+            }
+
+            if (valid) {
+                document.getElementById('leadForm').style.display = 'none';
+                document.getElementById('confirmation').classList.add('show');
+            }
         });
     </script>
 
