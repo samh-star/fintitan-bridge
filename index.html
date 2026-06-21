@@ -529,7 +529,7 @@
     </footer>
 
     <script>
-        document.getElementById('leadForm').addEventListener('submit', function(e) {
+        document.getElementById('leadForm').addEventListener('submit', async function(e) {
             e.preventDefault();
 
             var name = document.getElementById('name');
@@ -538,6 +538,7 @@
             var nameError = document.getElementById('name-error');
             var restaurantError = document.getElementById('restaurant-error');
             var emailError = document.getElementById('email-error');
+            var btn = this.querySelector('.btn');
             var valid = true;
 
             // Clear previous errors
@@ -567,9 +568,36 @@
                 valid = false;
             }
 
-            if (valid) {
-                document.getElementById('leadForm').style.display = 'none';
-                document.getElementById('confirmation').classList.add('show');
+            if (!valid) return;
+
+            // Disable button to prevent double-submit
+            btn.disabled = true;
+            btn.textContent = 'Saving...';
+
+            try {
+                var response = await fetch('/api/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: name.value.trim(),
+                        restaurant: restaurant.value.trim(),
+                        email: email.value.trim()
+                    })
+                });
+
+                if (response.ok) {
+                    // TEST MODE: Show confirmation instead of redirect
+                    document.getElementById('leadForm').style.display = 'none';
+                    document.getElementById('confirmation').classList.add('show');
+                } else {
+                    btn.disabled = false;
+                    btn.textContent = 'Continue to FinTitan';
+                    alert('Something did not go through. Please try again.');
+                }
+            } catch (err) {
+                btn.disabled = false;
+                btn.textContent = 'Continue to FinTitan';
+                alert('Something did not go through. Please try again.');
             }
         });
     </script>
