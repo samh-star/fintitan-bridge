@@ -33,7 +33,15 @@ export default async function handler(req, res) {
     const spreadsheetId = process.env.GOOGLE_SHEET_ID;
     const range = 'Sheet1!A:E';
 
-    const now = new Date().toISOString();
+    const now = new Date().toLocaleString('en-US', {
+      timeZone: 'America/Chicago',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true,
+    });
     const row = [now, name, restaurant, email, 'New'];
 
     await sheets.spreadsheets.values.append({
