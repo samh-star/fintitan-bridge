@@ -33,16 +33,16 @@ export default async function handler(req, res) {
     const spreadsheetId = process.env.GOOGLE_SHEET_ID;
     const range = 'Sheet1!A:E';
 
-    const now = new Date().toLocaleString('en-US', {
+    const submittedAt = new Intl.DateTimeFormat('en-US', {
       timeZone: 'America/Chicago',
-      year: 'numeric',
       month: '2-digit',
       day: '2-digit',
-      hour: '2-digit',
+      year: 'numeric',
+      hour: 'numeric',
       minute: '2-digit',
       hour12: true,
-    });
-    const row = [now, name, restaurant, email, 'New'];
+    }).format(new Date());
+    const row = [submittedAt, name, restaurant, email, 'New'];
 
     await sheets.spreadsheets.values.append({
       spreadsheetId,
