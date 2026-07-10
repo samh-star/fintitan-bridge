@@ -30,7 +30,7 @@
 
         /* Hero */
         .hero {
-            background: #0f1a3a;
+            background: linear-gradient(135deg, #0f1a3a 0%, #1a2850 100%);
             color: #fff;
             padding: 80px 0 64px;
             text-align: center;
@@ -40,7 +40,7 @@
         .hero h1 {
             font-size: 36px;
             font-weight: 700;
-            line-height: 1.25;
+            line-height: 1.3;
             margin-bottom: 20px;
             max-width: 520px;
             margin-left: auto;
@@ -53,16 +53,10 @@
 
         .hero p {
             font-size: 18px;
-            color: #a0a8c0;
+            color: #b8c0d8;
             line-height: 1.6;
-            max-width: 500px;
+            max-width: 540px;
             margin: 0 auto 16px;
-        }
-
-        .hero .reassure {
-            font-size: 16px;
-            color: #8a90a8;
-            margin-bottom: 24px;
         }
 
         .btn {
@@ -76,30 +70,49 @@
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            transition: background 0.2s;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(201, 162, 39, 0.2);
         }
 
         .btn:hover {
             background: #d4b43a;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3);
         }
 
-        /* Sections */
+        /* Section variations */
         .section {
             padding: 56px 0;
         }
 
-        .section-alt {
-            background: #eef1f6;
+        .section-navy {
+            background: #f8f9fb;
+            border-top: 1px solid #e8ebf0;
+            border-bottom: 1px solid #e8ebf0;
         }
 
-        .section-warm {
-            background: #f9f6f0;
+        .section-gold {
+            background: linear-gradient(to bottom, #fdfbf7, #faf7f0);
+            border-top: 2px solid #f0ead8;
+            border-bottom: 2px solid #f0ead8;
+        }
+
+        .section-white {
+            background: #fff;
+        }
+
+        .section-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 36px 40px;
+            box-shadow: 0 2px 12px rgba(15, 26, 58, 0.06);
+            border-top: 3px solid #c9a227;
         }
 
         .section h2 {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 700;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             color: #0f1a3a;
             text-align: center;
         }
@@ -110,7 +123,7 @@
             width: 48px;
             height: 3px;
             background: #c9a227;
-            margin: 12px auto 0;
+            margin: 14px auto 0;
             border-radius: 2px;
         }
 
@@ -118,48 +131,36 @@
             font-size: 17px;
             color: #4a4a5a;
             margin-bottom: 16px;
+            text-align: left;
         }
 
         .section p:last-child {
             margin-bottom: 0;
         }
 
-        /* Clarification box */
-        .clarify {
-            background: #f0f3f8;
-            border-left: 3px solid #c9a227;
-            padding: 18px 24px;
-            margin: 20px 0 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .clarify p {
-            font-size: 15px;
-            color: #3a3a4a;
-            margin: 0;
-        }
-
-        /* Lists */
+        /* Bullet lists */
         .simple-list {
             list-style: none;
             padding: 0;
-            margin: 16px 0 0;
+            margin: 20px 0 0;
+            text-align: left;
         }
 
         .simple-list li {
-            padding: 10px 0 10px 28px;
+            padding: 12px 0 12px 32px;
             position: relative;
             font-size: 17px;
             color: #4a4a5a;
+            line-height: 1.6;
         }
 
         .simple-list li::before {
             content: "";
             position: absolute;
             left: 0;
-            top: 18px;
-            width: 8px;
-            height: 8px;
+            top: 20px;
+            width: 10px;
+            height: 10px;
             background: #c9a227;
             border-radius: 50%;
         }
@@ -168,19 +169,24 @@
         .steps {
             display: flex;
             flex-direction: column;
-            gap: 24px;
-            margin-top: 24px;
+            gap: 20px;
+            margin-top: 28px;
         }
 
         .step {
             display: flex;
             align-items: flex-start;
-            gap: 16px;
+            gap: 18px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 24px 28px;
+            box-shadow: 0 2px 8px rgba(15, 26, 58, 0.05);
+            border-left: 4px solid #c9a227;
         }
 
         .step-number {
-            width: 36px;
-            height: 36px;
+            width: 40px;
+            height: 40px;
             background: #0f1a3a;
             color: #c9a227;
             border-radius: 50%;
@@ -188,14 +194,14 @@
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 14px;
+            font-size: 16px;
             flex-shrink: 0;
         }
 
         .step-content h3 {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 600;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
             color: #0f1a3a;
         }
 
@@ -205,32 +211,70 @@
             margin: 0;
         }
 
+        /* Centered button container */
+        .btn-container {
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        /* Disclosure box */
+        .disclosure-box {
+            background: #faf8f3;
+            border-radius: 10px;
+            padding: 32px 36px;
+            border: 2px solid #ece8e0;
+            margin: 0 auto;
+            max-width: 660px;
+        }
+
+        .disclosure-box h2 {
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+
+        .disclosure-box p {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .disclosure-box p:last-child {
+            margin-bottom: 0;
+        }
+
         /* Form Section */
         .form-section {
-            background: #0f1a3a;
+            background: linear-gradient(135deg, #0f1a3a 0%, #1a2850 100%);
             padding: 72px 0;
         }
 
         .form-section h2 {
             color: #fff;
-            font-size: 24px;
-            margin-bottom: 8px;
+            font-size: 26px;
+            margin-bottom: 10px;
             text-align: center;
+        }
+
+        .form-section h2::after {
+            background: #c9a227;
         }
 
         .form-section > p {
             color: #d0d4e0;
             text-align: center;
-            margin-bottom: 32px;
-            font-size: 16px;
+            margin-bottom: 36px;
+            font-size: 17px;
+            max-width: 580px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .form-card {
             background: #fff;
             border-radius: 12px;
-            padding: 36px;
-            max-width: 460px;
+            padding: 40px;
+            max-width: 500px;
             margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         }
 
         .form-group {
@@ -242,13 +286,13 @@
             font-size: 14px;
             font-weight: 600;
             color: #2a2a3a;
-            margin-bottom: 6px;
+            margin-bottom: 7px;
         }
 
         .form-group input[type="text"],
         .form-group input[type="email"] {
             width: 100%;
-            padding: 12px 14px;
+            padding: 13px 15px;
             border: 1px solid #d0d4dc;
             border-radius: 6px;
             font-size: 16px;
@@ -282,22 +326,31 @@
 
         .form-card .btn {
             width: 100%;
-            margin-top: 4px;
+            margin-top: 8px;
+        }
+
+        .form-inline-note {
+            font-size: 14px;
+            color: #5a5a6a;
+            margin-bottom: 22px;
+            text-align: left;
+            line-height: 1.5;
         }
 
         .form-reassurance {
-            margin-top: 20px;
-            padding: 16px 20px;
+            margin-top: 24px;
+            padding: 18px 22px;
             background: #fdfbf5;
             border-radius: 8px;
             text-align: left;
+            border: 1px solid #f0ead8;
         }
 
         .form-reassurance h4 {
             font-size: 13px;
             font-weight: 600;
             color: #3a3a4a;
-            margin: 0 0 8px;
+            margin: 0 0 9px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
@@ -310,19 +363,19 @@
         }
 
         .form-divider {
-            margin: 20px 0;
+            margin: 22px 0;
             border: none;
             border-top: 1px solid #e0e0e0;
         }
 
         .form-disclosure {
-            text-align: left;
+            text-align: center;
         }
 
         .form-disclosure p {
             font-size: 13px;
-            color: #5a5a6a;
-            line-height: 1.6;
+            color: #6a6a7a;
+            line-height: 1.5;
             margin: 0;
         }
 
@@ -338,23 +391,23 @@
         }
 
         .confirmation-icon {
-            width: 48px;
-            height: 48px;
+            width: 52px;
+            height: 52px;
             background: #c9a227;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 16px;
-            font-size: 20px;
+            margin: 0 auto 18px;
+            font-size: 22px;
             color: #0f1a3a;
         }
 
         .confirmation h3 {
-            font-size: 18px;
+            font-size: 19px;
             font-weight: 700;
             color: #0f1a3a;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .confirmation p {
@@ -365,15 +418,24 @@
         /* Footer */
         .footer {
             text-align: center;
-            padding: 32px 0;
+            padding: 36px 0;
             color: #8a8a9a;
             font-size: 12px;
+        }
+
+        .footer a {
+            color: #6a6a8a;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
 
         /* Mobile */
         @media (max-width: 600px) {
             .hero {
-                padding: 80px 0 64px;
+                padding: 64px 0 52px;
             }
 
             .hero h1 {
@@ -389,11 +451,23 @@
             }
 
             .section h2 {
-                font-size: 21px;
+                font-size: 22px;
+            }
+
+            .section-card {
+                padding: 28px 24px;
+            }
+
+            .disclosure-box {
+                padding: 24px 20px;
+            }
+
+            .step {
+                padding: 20px 20px;
             }
 
             .form-card {
-                padding: 24px;
+                padding: 28px 24px;
             }
 
             .container {
@@ -406,102 +480,186 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div style="position: absolute; top: 16px; right: 20px; font-size: 12px; color: rgba(255,255,255,0.45); letter-spacing: 0.3px;">Draft v8 — Brian-Based Copy</div>
+        <div style="position: absolute; top: 16px; right: 20px; font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing: 0.3px;">Draft v10 — Outline-Based Page</div>
         <div class="container">
             <h1>This May Be Worth Checking<br>If Your Restaurant Has<br><span>Tipped Employees</span></h1>
-            <p>Some restaurant owners never know whether the FICA Tip Credit has been reviewed for their business. The basic idea is not hard to understand, but the review and filing details are specialized.</p>
-            <p>You do not have to figure this out on your own.</p>
+            <p>If your restaurant has tipped employees, there is a federal tax credit that may be worth asking about.</p>
+            <p>This page explains the FICA Tip Credit in plain English — what it is, why it can be missed, and why the review is more specialized than the basic idea.</p>
+            <p style="color: #a0a8c0; margin-bottom: 28px;">You do not have to figure this out on your own.</p>
             <a href="#short-version" class="btn" onclick="event.preventDefault(); document.getElementById('short-version').scrollIntoView({behavior: 'smooth'});">Start with the Short Version</a>
         </div>
     </section>
 
-    <!-- The Short Version -->
-    <section class="section" id="short-version">
+    <!-- Section 1: The Short Version -->
+    <section class="section section-gold" id="short-version">
         <div class="container">
-            <div style="background: #f4f6f9; border-radius: 12px; padding: 32px 36px; border-top: 3px solid #c9a227;">
-                <h2 style="margin-top: 0;">The Short Version</h2>
-                <ul class="simple-list" style="margin-top: 12px;">
-                    <li>If your restaurant has tipped employees, the FICA Tip Credit may be worth checking.</li>
-                    <li>It is a federal tax credit tied to employer Social Security and Medicare taxes paid on certain employee tips.</li>
-                    <li>It may not have been reviewed separately, even if your regular tax work has been handled properly.</li>
-                    <li>This page does not decide whether you qualify. It is simply a plain-English starting point so you can request more information.</li>
+            <div class="section-card">
+                <h2>The Short Version</h2>
+                <ul class="simple-list">
+                    <li>This is a real, long-standing federal tax credit.</li>
+                    <li>It is tied to employer payroll taxes paid on certain reported employee tips.</li>
+                    <li>Many restaurants may never have had it specifically reviewed.</li>
+                    <li>Your accountant may not have done anything wrong; this is simply a specialized area.</li>
+                    <li>The idea is simple, but the review and filing work are detailed.</li>
+                    <li>Prior years may be worth asking about.</li>
+                    <li>You do not have to figure it out on your own.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- What Is This? -->
-    <section class="section" id="what-is">
+    <!-- Section 2: What the FICA Tip Credit Is -->
+    <section class="section section-white">
         <div class="container">
-            <h2>What Is the FICA Tip Credit?</h2>
-            <p>The FICA Tip Credit is a federal tax credit under IRS Section 45B.</p>
-            <p>In plain English, it is tied to employer Social Security and Medicare taxes paid on certain employee tips. That matters because tips are paid to your employees, not kept by the restaurant, but the employer may still pay payroll taxes connected to those reported tips.</p>
-            <p>This is not a new gimmick, grant program, or special promotion. It is a real tax-credit area that has been around for years.</p>
-            <p>Whether it applies depends on your restaurant's actual situation. The point of this page is not to give tax advice or tell you that your restaurant qualifies. The point is simply this: if your restaurant has tipped employees, it may be worth a closer review.</p>
+            <h2>What the FICA Tip Credit Is</h2>
+            <p>The FICA Tip Credit is a federal tax credit tied to IRS Section 45B.</p>
+            <p>In plain English, it relates to employer Social Security and Medicare taxes paid on certain reported employee tips.</p>
+            <p>That matters because tips are paid to your employees, not kept by the restaurant, but the restaurant may still pay employer payroll taxes connected to those reported tips.</p>
+            <p>This is a tax credit, not just a deduction. Whether it applies depends on your restaurant's actual situation.</p>
         </div>
     </section>
 
-    <!-- Why Restaurants May Miss This -->
-    <section class="section section-alt">
+    <!-- Section 3: Why This Can Be Easy to Miss -->
+    <section class="section section-navy">
         <div class="container">
-            <h2>Why It May Not Have Been Reviewed</h2>
+            <h2>Why This Can Be Easy to Miss</h2>
             <p>This credit can fall between payroll and accounting.</p>
-            <p>Your payroll records, reported tips, tax returns, and accounting work may all exist, but that does not always mean the FICA Tip Credit has been reviewed separately.</p>
-            <p>That does not mean your accountant did anything wrong. Your accountant may be handling your normal tax work properly. This is just a more specialized area that may not be part of the usual annual tax process.</p>
-            <p>If your restaurant has tipped employees and those tips are reported through payroll, it may be worth asking whether this has been looked at specifically.</p>
+            <p>Your payroll records may show reported tips. Your tax return may have been prepared. Your accountant may be handling your normal tax work properly.</p>
+            <p>But that does not always mean this specific credit has been reviewed separately.</p>
+            <p>That is one reason some restaurant owners simply do not know whether the FICA Tip Credit has ever been checked for their business.</p>
         </div>
     </section>
 
-    <!-- The Basic Idea Is Simple. The Review Is Specialized. -->
-    <section class="section section-warm">
+    <!-- Section 4: This Does Not Mean Your Accountant Did Anything Wrong -->
+    <section class="section section-white">
         <div class="container">
-            <h2>The Basic Idea Is Simple. The Review Is Specialized.</h2>
-            <p>The basic idea is easy enough to understand: if your restaurant paid employer payroll taxes on certain reported tips, there may be something worth reviewing.</p>
-            <p>The specialized part is the review itself. Documentation, prior-year questions, and filing details are not something most restaurant owners want to figure out on their own.</p>
-            <p>That is why the answer is not to guess, and it is not to try to become a tax expert. The better move is to get it in front of a team that deals with this type of review.</p>
-            <p>You do not have to figure this out on your own.</p>
-            <a href="#form" class="btn" onclick="event.preventDefault(); document.getElementById('form').scrollIntoView({behavior: 'smooth'});">I’d Like More Information</a>
+            <h2>This Does Not Mean Your Accountant Did Anything Wrong</h2>
+            <p>This is important.</p>
+            <p>This page is not saying your accountant missed something obvious or did anything wrong.</p>
+            <p>Many local accountants are focused on the normal work restaurant owners need every year: tax returns, bookkeeping, payroll coordination, compliance, and general tax planning.</p>
+            <p>The FICA Tip Credit is a more specialized area. It may require a separate look at tips, payroll records, prior tax filings, and the way the credit rules apply to your actual situation.</p>
         </div>
     </section>
 
-    <!-- What Happens Next -->
-    <section class="section section-alt">
+    <!-- Section 5: Not a New Gimmick or Grant Program -->
+    <section class="section section-navy">
+        <div class="container">
+            <h2>Not a New Gimmick or Grant Program</h2>
+            <p>The FICA Tip Credit is not a new rebate program, a grant, or a special promotion.</p>
+            <p>It is tied to a real section of the federal tax code.</p>
+            <p>That matters because anything involving tax credits can sound questionable at first. This page is not about chasing a loophole. It is about asking whether a legitimate credit has ever been reviewed for your restaurant.</p>
+        </div>
+    </section>
+
+    <!-- Section 6: The Basic Question -->
+    <section class="section section-white">
+        <div class="container">
+            <h2>The Basic Question</h2>
+            <p>If your restaurant has tipped employees, the basic question is simple:</p>
+            <p style="font-weight: 600; color: #2a2a3a;">Have employer payroll taxes paid on certain reported tips ever been reviewed for the FICA Tip Credit?</p>
+            <p>That does not mean your restaurant qualifies. It simply means the question may be worth asking.</p>
+        </div>
+    </section>
+
+    <!-- Section 7: Reported Tips Matter -->
+    <section class="section section-navy">
+        <div class="container">
+            <h2>Reported Tips Matter</h2>
+            <p>This credit is tied to certain reported employee tips.</p>
+            <p>In general, the tips need to be part of the payroll records, and the employer must have paid employer payroll taxes connected to those tips.</p>
+            <p>That is why guessing is not enough. The actual records matter.</p>
+        </div>
+    </section>
+
+    <!-- Section 8: Service Charges Are Not the Same Thing -->
+    <section class="section section-white">
+        <div class="container">
+            <h2>Service Charges Are Not the Same Thing</h2>
+            <p>One detail that can matter is the difference between voluntary customer tips and required service charges.</p>
+            <p>Those are not always treated the same way.</p>
+            <p>You do not need to sort that out on this page. The point is simply that details like this are one reason the review should be handled carefully.</p>
+        </div>
+    </section>
+
+    <!-- Section 9: The Idea Is Simple. The Review Is Specialized. -->
+    <section class="section section-gold">
+        <div class="container">
+            <h2>The Idea Is Simple. The Review Is Specialized.</h2>
+            <p>The basic idea is easy enough to understand.</p>
+            <p>If your restaurant paid employer payroll taxes on certain reported tips, there may be something worth reviewing.</p>
+            <p>The specialized part is the review itself.</p>
+            <p>Payroll records, reported tips, service charges, prior years, tax filings, and documentation can all matter.</p>
+            <p>That is why most restaurant owners should not have to figure this out by themselves.</p>
+            <div class="btn-container">
+                <a href="#form" class="btn" onclick="event.preventDefault(); document.getElementById('form').scrollIntoView({behavior: 'smooth'});">I'd Like More Information</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Prior Years May Be Worth Asking About -->
+    <section class="section section-navy">
+        <div class="container">
+            <h2>Prior Years May Be Worth Asking About</h2>
+            <p>In some situations, prior years may be worth reviewing.</p>
+            <p>That does not mean a refund is guaranteed. It does not mean your restaurant qualifies. It simply means that if this credit was never reviewed, prior years may be part of the question.</p>
+            <p>The timing, records, and tax situation all matter.</p>
+        </div>
+    </section>
+
+    <!-- Section 11: Why Careful Review Matters -->
+    <section class="section section-white">
+        <div class="container">
+            <h2>Why Careful Review Matters</h2>
+            <p>Tax credits should be handled carefully.</p>
+            <p>The issue is not just whether the credit exists. The issue is whether it applies to your restaurant, based on your records and facts.</p>
+            <p>That is why the better move is not to guess. The better move is to get the question in front of people who work with this type of credit.</p>
+        </div>
+    </section>
+
+    <!-- Section 12: What Happens Next -->
+    <section class="section section-gold">
         <div class="container">
             <h2>What Happens Next</h2>
-            <div class="steps" style="margin-top: 20px; gap: 16px;">
-                <div class="step" style="background: #fff; border-radius: 10px; padding: 20px 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+            <p>If this sounds like something worth checking, the process is simple.</p>
+            <p>You enter your name, restaurant name, and email. That lets me know you came through this page and helps connect your request with the proper review process.</p>
+            <p style="font-weight: 600; color: #2a2a3a; margin-top: 20px;">This is where FinTitan comes in.</p>
+            <p>FinTitan handles the actual review and next steps. I am not reviewing your tax situation, giving tax advice, or determining whether your restaurant qualifies.</p>
+            <p>The goal is to point you in the right direction without asking you to figure out the tax details yourself.</p>
+            
+            <div class="steps">
+                <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Enter your basic information</h3>
-                        <p style="margin: 4px 0 0; font-size: 15px; color: #5a5a6a;">Name, restaurant name, and email</p>
+                        <p>Name, restaurant name, and email</p>
                     </div>
                 </div>
-                <div class="step" style="background: #fff; border-radius: 10px; padding: 20px 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>Your request is connected with FinTitan</h3>
-                        <p style="margin: 4px 0 0; font-size: 15px; color: #5a5a6a;">I help route your inquiry to their review team</p>
+                        <p>I help route your inquiry to their review team</p>
                     </div>
                 </div>
-                <div class="step" style="background: #fff; border-radius: 10px; padding: 20px 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>FinTitan handles the review and next steps</h3>
-                        <p style="margin: 4px 0 0; font-size: 15px; color: #5a5a6a;">They explain what comes next for your restaurant</p>
+                        <p>They explain what comes next for your restaurant</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Clear Note Before You Continue -->
-    <section class="section" style="padding: 36px 0;">
+    <!-- Section 13: A Clear Note Before You Continue -->
+    <section class="section section-white" style="padding: 48px 0;">
         <div class="container">
-            <div style="background: #faf8f3; border-radius: 10px; padding: 28px 32px; border: 1px solid #ece8e0;">
-                <h2 style="font-size: 20px; margin-bottom: 12px;">A Clear Note Before You Continue</h2>
-                <p style="font-size: 16px; margin-bottom: 10px;">I am a referring agent for FinTitan and may receive a referral fee if your business becomes a FinTitan client.</p>
-                <p style="font-size: 16px; margin-bottom: 10px;">I am not a tax advisor, and I am not determining whether your restaurant qualifies. FinTitan handles the actual review and next steps.</p>
-                <p style="font-size: 16px; margin-bottom: 0;">This does not replace your accountant. It is simply a way to have FinTitan review whether the FICA Tip Credit may apply to your restaurant.</p>
+            <div class="disclosure-box">
+                <h2>A Clear Note Before You Continue</h2>
+                <p>I am a referring agent for FinTitan and may receive a referral fee if your business becomes a FinTitan client.</p>
+                <p>I am not a tax advisor, and I am not determining whether your restaurant qualifies. FinTitan handles the actual review and next steps.</p>
+                <p>This does not replace your accountant. It is simply a way to have FinTitan review whether the FICA Tip Credit may apply to your restaurant.</p>
             </div>
         </div>
     </section>
@@ -509,7 +667,7 @@
     <!-- Form -->
     <section class="form-section" id="form">
         <div class="container">
-            <h2>Ready to Have This Checked?</h2>
+            <h2>Ready to Learn More?</h2>
             <p>Enter your name, restaurant name, and email below. This lets me know you came through this page and helps connect your request with FinTitan.</p>
 
             <div class="form-card" id="formCard">
@@ -532,13 +690,13 @@
                         <p class="error-msg" id="email-error">Please enter a valid email address.</p>
                     </div>
 
-                    <p style="font-size: 14px; color: #5a5a6a; margin-bottom: 20px; text-align: left;">As part of their process, FinTitan may ask for a few basic details about your restaurant so their team can explain what comes next.</p>
+                    <p class="form-inline-note">As part of their process, FinTitan may ask for a few basic details about your restaurant so their team can explain what comes next.</p>
 
                     <button type="submit" class="btn">Request More Information</button>
 
                     <div class="form-reassurance">
                         <h4>Before You Continue</h4>
-                        <p>You are not committing to anything by continuing. There is no upfront cost to have FinTitan take a look.</p>
+                        <p>You are not committing to anything by requesting more information. There is no upfront cost to have FinTitan review whether this may apply.</p>
                     </div>
 
                     <hr class="form-divider">
@@ -560,7 +718,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>Referring agent for FinTitan · Not a tax advisor · <a href="/privacy.html" style="color: #6a6a8a; text-decoration: none;">Privacy Policy</a></p>
+            <p>Referring agent for FinTitan · Not a tax advisor · <a href="/privacy.html">Privacy Policy</a></p>
         </div>
     </footer>
 
