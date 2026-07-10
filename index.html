@@ -244,7 +244,7 @@
         /* Form Section */
         .form-section {
             background: linear-gradient(135deg, #0f1a3a 0%, #1a2850 100%);
-            padding: 72px 0;
+            padding: 64px 0;
         }
 
         .form-section h2 {
@@ -261,7 +261,7 @@
         .form-section > p {
             color: #d0d4e0;
             text-align: center;
-            margin-bottom: 36px;
+            margin-bottom: 28px;
             font-size: 17px;
             max-width: 580px;
             margin-left: auto;
@@ -480,7 +480,7 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div style="position: absolute; top: 16px; right: 20px; font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing: 0.3px;">Draft v13 — Section and Form Polish</div>
+        <div style="position: absolute; top: 16px; right: 20px; font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing: 0.3px;">Draft v14 — Final Disclosure</div>
         <div class="container">
             <h1>This May Be Worth Checking<br>If Your Restaurant Has<br><span>Tipped Employees</span></h1>
             <div style="max-width: 560px; margin: 0 auto; text-align: left; background: rgba(255,255,255,0.08); padding: 28px 32px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12);">
@@ -661,13 +661,14 @@
 
 
 
-                    <button type="submit" class="btn">Request More Information</button>
+                    <button type="submit" class="btn">Send My Request</button>
 
                     <div style="margin-top: 24px; padding: 20px 24px; background: #f9f6f0; border-radius: 8px; border: 1px solid #e8e0d0; text-align: left;">
-                        <h4 style="font-size: 14px; font-weight: 600; color: #2a2a3a; margin: 0 0 10px; text-transform: uppercase; letter-spacing: 0.5px;">A Clear Note</h4>
-                        <p style="font-size: 14px; color: #4a4a5a; line-height: 1.6; margin: 0 0 10px;">FinTitan is the group that handles the actual FICA Tip Credit review and next steps.</p>
-                        <p style="font-size: 14px; color: #4a4a5a; line-height: 1.6; margin: 0 0 10px;">I am a referring agent for FinTitan and may receive compensation or a referral fee if your business becomes a FinTitan client.</p>
-                        <p style="font-size: 14px; color: #4a4a5a; line-height: 1.6; margin: 0;">I am not a tax advisor, and I am not determining whether your restaurant qualifies. This does not replace your accountant.</p>
+                        <h4 style="font-size: 14px; font-weight: 600; color: #2a2a3a; margin: 0 0 10px; text-transform: uppercase; letter-spacing: 0.5px;">Who Handles Your Review</h4>
+                        <p style="font-size: 14px; color: #4a4a5a; line-height: 1.6; margin: 0 0 12px;">The actual FICA Tip Credit review is handled by FinTitan, a tax-credit consulting group that works with this type of review.</p>
+                        <p style="font-size: 14px; color: #4a4a5a; line-height: 1.6; margin: 0 0 12px;">I am a referring agent for FinTitan and may receive compensation or a referral fee if your business becomes a FinTitan client.</p>
+                        <p style="font-size: 14px; color: #4a4a5a; line-height: 1.6; margin: 0 0 12px;">I am not a tax advisor, and I am not determining whether your restaurant qualifies. This does not replace your accountant.</p>
+                        <p style="font-size: 14px; color: #4a4a5a; line-height: 1.6; margin: 0;">If you continue with FinTitan, they may ask you to confirm some of the same information and answer a few additional questions so their team can explain what comes next.</p>
                     </div>
 
                     <hr class="form-divider">
@@ -679,8 +680,8 @@
 
                 <div class="confirmation" id="confirmation">
                     <div class="confirmation-icon">✓</div>
-                    <h3>Thank You</h3>
-                    <p>Your information has been saved. Thank you.</p>
+                    <h3>Request Received</h3>
+                    <p>Your request has been saved. I'll help connect you with FinTitan's review process.</p>
                 </div>
             </div>
         </div>
@@ -737,7 +738,7 @@
 
             // Disable button to prevent double-submit
             btn.disabled = true;
-            btn.textContent = 'Saving...';
+            btn.textContent = 'Sending...';
 
             try {
                 var response = await fetch('/api/submit', {
@@ -752,16 +753,18 @@
 
                 if (response.ok) {
                     // TEST MODE: Show confirmation instead of redirect
+                    // TODO: When ready to go live, replace confirmation with:
+                    // window.location.href = 'https://fintitan.com/partner-referral?ref=samharding&lead=' + encodeURIComponent(email.value.trim());
                     document.getElementById('leadForm').style.display = 'none';
                     document.getElementById('confirmation').classList.add('show');
                 } else {
                     btn.disabled = false;
-                    btn.textContent = 'Request More Information';
+                    btn.textContent = 'Send My Request';
                     alert('Something did not go through. Please try again.');
                 }
             } catch (err) {
                 btn.disabled = false;
-                btn.textContent = 'Request More Information';
+                btn.textContent = 'Send My Request';
                 alert('Something did not go through. Please try again.');
             }
         });
