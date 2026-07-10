@@ -244,7 +244,7 @@
         /* Form Section */
         .form-section {
             background: linear-gradient(135deg, #0f1a3a 0%, #1a2850 100%);
-            padding: 64px 0;
+            padding: 48px 0;
         }
 
         .form-section h2 {
@@ -261,7 +261,7 @@
         .form-section > p {
             color: #d0d4e0;
             text-align: center;
-            margin-bottom: 28px;
+            margin-bottom: 14px;
             font-size: 17px;
             max-width: 580px;
             margin-left: auto;
@@ -480,7 +480,7 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div style="position: absolute; top: 16px; right: 20px; font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing: 0.3px;">Draft v14 — Final Disclosure</div>
+        <div style="position: absolute; top: 16px; right: 20px; font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing: 0.3px;">Draft v14 — Form Flow Polish</div>
         <div class="container">
             <h1>This May Be Worth Checking<br>If Your Restaurant Has<br><span>Tipped Employees</span></h1>
             <div style="max-width: 560px; margin: 0 auto; text-align: left; background: rgba(255,255,255,0.08); padding: 28px 32px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12);">
@@ -637,7 +637,7 @@
             <div class="form-card" id="formCard">
                 <div class="form-reassurance" style="margin-top: 0; margin-bottom: 24px;">
                     <h4>Before You Continue</h4>
-                    <p>You are not committing to anything by requesting more information. You are not applying for anything here. There is no upfront cost to have FinTitan review whether this may apply.</p>
+                    <p>You are not committing to anything by sending this request. You are not applying for anything here. There is no upfront cost to have FinTitan review whether this may apply.</p>
                 </div>
 
                 <form id="leadForm">
@@ -680,8 +680,10 @@
 
                 <div class="confirmation" id="confirmation">
                     <div class="confirmation-icon">✓</div>
-                    <h3>Request Received</h3>
-                    <p>Your request has been saved. I'll help connect you with FinTitan's review process.</p>
+                    <h3>Thank You — Your Request Was Saved</h3>
+                    <p>Your information has been saved.</p>
+                    <p style="margin-top: 10px;">When this page is fully connected, the next step will be to continue to FinTitan’s page. FinTitan may ask you to confirm some of the same information and may ask a few additional questions so their team can explain what comes next.</p>
+                    <p style="margin-top: 10px;">For now, this page is still in test mode, so you have not been redirected.</p>
                 </div>
             </div>
         </div>
@@ -752,6 +754,7 @@
                 });
 
                 if (response.ok) {
+                    // FINAL REDIRECT PLAN: After saving the form submission, show a short confirmation message with a Continue to FinTitan button instead of auto-redirecting immediately.
                     // TEST MODE: Show confirmation instead of redirect
                     // TODO: When ready to go live, replace confirmation with:
                     // window.location.href = 'https://fintitan.com/partner-referral?ref=samharding&lead=' + encodeURIComponent(email.value.trim());
