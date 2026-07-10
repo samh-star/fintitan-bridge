@@ -480,21 +480,22 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div style="position: absolute; top: 16px; right: 20px; font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing: 0.3px;">Draft v11 — Tone and Handoff Polish</div>
+        <div style="position: absolute; top: 16px; right: 20px; font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing: 0.3px;">Draft v12 — Layout and Handoff Cleanup</div>
         <div class="container">
             <h1>This May Be Worth Checking<br>If Your Restaurant Has<br><span>Tipped Employees</span></h1>
-            <p>If your restaurant has tipped employees, there is a federal tax credit that may be worth asking about.</p>
-            <p>This page explains the FICA Tip Credit in plain English — what it is, why it can be missed, and why the review is more specialized than the basic idea.</p>
-            <p style="color: #a0a8c0; margin-bottom: 28px;">You do not have to figure this out on your own.</p>
-            <a href="#short-version" class="btn" onclick="event.preventDefault(); document.getElementById('short-version').scrollIntoView({behavior: 'smooth'});">Start with the Short Version</a>
+            <div style="max-width: 560px; margin: 0 auto; text-align: left; background: rgba(255,255,255,0.08); padding: 28px 32px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12);">
+                <p style="margin-bottom: 16px;">If your restaurant has tipped employees, there is a federal tax credit that may be worth asking about.</p>
+                <p style="margin-bottom: 16px;">Below, I'll walk through the FICA Tip Credit in plain English — what it is, why it can be missed, and why the review is more specialized than the basic idea.</p>
+                <p style="margin-bottom: 0; color: #d0d4e0;">You do not have to figure this out on your own.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Section 1: The Short Version -->
-    <section class="section section-gold" id="short-version">
+    <!-- Section 1: A Quick Look at What's Below -->
+    <section class="section section-gold">
         <div class="container">
             <div class="section-card">
-                <h2>Quick Recap Before You Read</h2>
+                <h2>A Quick Look at What's Below</h2>
                 <ul class="simple-list">
                     <li>The FICA Tip Credit is a real, long-standing federal tax credit.</li>
                     <li>It is tied to employer payroll taxes paid on certain reported employee tips.</li>
@@ -590,9 +591,6 @@
             <p>The specialized part is the review itself.</p>
             <p>Payroll records, reported tips, service charges, prior years, tax filings, and documentation can all matter.</p>
             <p>That is why most restaurant owners should not have to figure this out by themselves.</p>
-            <div class="btn-container">
-                <a href="#form" class="btn" onclick="event.preventDefault(); document.getElementById('form').scrollIntoView({behavior: 'smooth'});">I'd Like More Information</a>
-            </div>
         </div>
     </section>
 
@@ -621,47 +619,13 @@
         <div class="container">
             <h2>What Happens Next</h2>
             <p>If this sounds like something you want to check, the next step is simple.</p>
-            <p>If you decide you want more information, I help connect your request with FinTitan, the group that handles the actual review process.</p>
-            <p>That is the handoff. I am not reviewing your tax situation, giving tax advice, or determining whether your restaurant qualifies. FinTitan handles the review and next steps.</p>
-            <p>The goal is to point you in the right direction without asking you to figure out the tax details yourself.</p>
-            
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Enter your basic information</h3>
-                        <p>Your name, restaurant name, and email let me know you came through this page.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Your request is connected</h3>
-                        <p>If you want more information, your request can be connected with FinTitan's review process.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>FinTitan handles the review</h3>
-                        <p>Their team handles the actual review and next steps. I do not determine qualification.</p>
-                    </div>
-                </div>
-            </div>
+            <p>You can enter your name, restaurant name, and email below. That lets me know you came through this page and gives me the basic information needed to connect your request with the review process.</p>
+            <p>The review itself is not handled by me. It is handled by FinTitan, a tax-credit consulting group that works with this type of review.</p>
+            <p>I am not reviewing your tax situation, giving tax advice, or determining whether your restaurant qualifies. My role is simply to help point the request in the right direction.</p>
         </div>
     </section>
 
-    <!-- Section 13: A Clear Note Before You Continue -->
-    <section class="section section-white" style="padding: 48px 0;">
-        <div class="container">
-            <div class="disclosure-box">
-                <h2>A Clear Note Before You Continue</h2>
-                <p>I am a referring agent for FinTitan and may receive compensation or a referral fee if your business becomes a FinTitan client.</p>
-                <p>I am not a tax advisor, and I am not determining whether your restaurant qualifies. FinTitan handles the actual review and next steps.</p>
-                <p>This does not replace your accountant. It is simply a way to have FinTitan review whether the FICA Tip Credit may apply to your restaurant.</p>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Form -->
     <section class="form-section" id="form">
@@ -693,6 +657,13 @@
 
 
                     <button type="submit" class="btn">Request More Information</button>
+
+                    <div style="margin-top: 24px; padding: 20px 24px; background: #f9f6f0; border-radius: 8px; border: 1px solid #e8e0d0; text-align: left;">
+                        <h4 style="font-size: 14px; font-weight: 600; color: #2a2a3a; margin: 0 0 10px; text-transform: uppercase; letter-spacing: 0.5px;">A Clear Note</h4>
+                        <p style="font-size: 14px; color: #4a4a5a; line-height: 1.6; margin: 0 0 10px;">FinTitan is the group that handles the actual FICA Tip Credit review and next steps.</p>
+                        <p style="font-size: 14px; color: #4a4a5a; line-height: 1.6; margin: 0 0 10px;">I am a referring agent for FinTitan and may receive compensation or a referral fee if your business becomes a FinTitan client.</p>
+                        <p style="font-size: 14px; color: #4a4a5a; line-height: 1.6; margin: 0;">I am not a tax advisor, and I am not determining whether your restaurant qualifies. This does not replace your accountant.</p>
+                    </div>
 
                     <div class="form-reassurance">
                         <h4>Before You Continue</h4>
