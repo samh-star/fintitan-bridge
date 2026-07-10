@@ -32,8 +32,9 @@
         .hero {
             background: #0f1a3a;
             color: #fff;
-            padding: 110px 0 90px;
+            padding: 80px 0 64px;
             text-align: center;
+            position: relative;
         }
 
         .hero h1 {
@@ -84,15 +85,15 @@
 
         /* Sections */
         .section {
-            padding: 48px 0;
+            padding: 56px 0;
         }
 
         .section-alt {
-            background: #f4f6f9;
+            background: #eef1f6;
         }
 
         .section-warm {
-            background: #faf8f3;
+            background: #f9f6f0;
         }
 
         .section h2 {
@@ -100,6 +101,17 @@
             font-weight: 700;
             margin-bottom: 16px;
             color: #0f1a3a;
+            text-align: center;
+        }
+
+        .section h2::after {
+            content: "";
+            display: block;
+            width: 48px;
+            height: 3px;
+            background: #c9a227;
+            margin: 12px auto 0;
+            border-radius: 2px;
         }
 
         .section p {
@@ -394,19 +406,19 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div style="position: absolute; top: 16px; right: 20px; font-size: 12px; color: rgba(255,255,255,0.45); letter-spacing: 0.3px;">Draft v4 — Layout Pass</div>
+        <div style="position: absolute; top: 16px; right: 20px; font-size: 12px; color: rgba(255,255,255,0.45); letter-spacing: 0.3px;">Draft v5 — Formatting Polish</div>
         <div class="container">
-            <h1>This May Be Worth Checking If Your Restaurant Has <span>Tipped Employees</span></h1>
+            <h1>This May Be Worth Checking<br>If Your Restaurant Has<br><span>Tipped Employees</span></h1>
             <p>Some restaurants may be able to benefit from the FICA Tip Credit. The basic idea is simple, but the review and filing details are specialized. You do not have to figure this out on your own.</p>
-            <a href="#form" class="btn" onclick="event.preventDefault(); document.getElementById('form').scrollIntoView({behavior: 'smooth'});">Learn More About This</a>
+            <a href="#short-version" class="btn" onclick="event.preventDefault(); document.getElementById('short-version').scrollIntoView({behavior: 'smooth'});">Start with the Short Version</a>
         </div>
     </section>
 
-    <!-- Quick Recap -->
-    <section class="section" id="quick-recap">
+    <!-- The Short Version -->
+    <section class="section" id="short-version">
         <div class="container">
-            <div style="background: #f0f3f8; border-radius: 12px; padding: 32px 36px; border-left: 4px solid #c9a227;">
-                <h2 style="margin-top: 0;">Quick Recap</h2>
+            <div style="background: #f4f6f9; border-radius: 12px; padding: 32px 36px; border-top: 3px solid #c9a227;">
+                <h2 style="margin-top: 0;">The Short Version</h2>
                 <ul class="simple-list" style="margin-top: 12px;">
                     <li>The FICA Tip Credit is tied to employer payroll taxes paid on certain employee tips.</li>
                     <li>Many restaurant owners may not know whether it has ever been reviewed separately.</li>
@@ -446,7 +458,7 @@
             <p>But the actual review, documentation, prior-year questions, and filing details are not something most restaurant owners want to figure out on their own.</p>
             <p>That is why the answer is not to guess, and it is not to try to become a tax expert. The better move is to get it in front of a team that deals with this type of review.</p>
             <p>You do not have to figure this out on your own.</p>
-            <a href="#form" class="btn" onclick="event.preventDefault(); document.getElementById('form').scrollIntoView({behavior: 'smooth'});">See If This May Apply</a>
+            <a href="#form" class="btn" onclick="event.preventDefault(); document.getElementById('form').scrollIntoView({behavior: 'smooth'});">I’d Like More Information</a>
         </div>
     </section>
 
