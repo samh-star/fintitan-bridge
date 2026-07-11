@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="build-version" content="v30-final-fica-video">
+    <meta name="build-version" content="v31-fica-video-end-reset">
     <title>Employer FICA Tip Credit — Restaurant Owners</title>
     <style>
         * {
@@ -490,6 +490,7 @@
             <div style="width: 100%; max-width: 960px; margin: 0 auto 32px; border: 2px solid #C9A227; border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); overflow: hidden; background: #000;">
                 <div style="position: relative; padding-top: 56.25%;">
                     <iframe
+                        id="bunny-fica-player"
                         title="FICA Tip Credit overview for restaurant owners"
                         src="https://player.mediadelivery.net/embed/702299/63eb774a-f192-43ce-bfbc-27488ac8d547?autoplay=false&loop=false&muted=false&preload=false&responsive=true"
                         loading="lazy"
@@ -796,6 +797,38 @@
                 btn.textContent = 'Send My Request';
                 alert('Something did not go through. Please try again.');
             }
+        });
+    </script>
+
+    <script
+        type="text/javascript"
+        src="https://assets.mediadelivery.net/playerjs/playerjs-latest.min.js">
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const iframe = document.getElementById("bunny-fica-player");
+
+            if (!iframe || !window.playerjs) {
+                return;
+            }
+
+            const player = new playerjs.Player(iframe);
+
+            player.on("ready", function () {
+                const supportsEnded = player.supports("event", "ended");
+                const supportsSeek = player.supports("method", "setCurrentTime");
+                const supportsPause = player.supports("method", "pause");
+
+                if (supportsEnded && supportsSeek && supportsPause) {
+                    player.on("ended", function () {
+                        player.setCurrentTime(0);
+
+                        window.setTimeout(function () {
+                            player.pause();
+                        }, 100);
+                    });
+                }
+            });
         });
     </script>
 
