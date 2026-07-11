@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temporary Video Embed Test</title>
+    <title>Temporary Bunny Stream Video Test</title>
     <style>
         * {
             margin: 0;
@@ -50,7 +50,7 @@
 
         .video-wrapper {
             position: relative;
-            padding: 56.25% 0 0 0;
+            padding-top: 56.25%;
         }
 
         .video-wrapper iframe {
@@ -59,7 +59,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border: none;
+            border: 0;
         }
 
         @media (max-width: 600px) {
@@ -78,17 +78,16 @@
     </style>
 </head>
 <body>
-    <h1>Temporary Video Embed Test</h1>
-    <p class="note">This page is only for testing the VideoMan player.</p>
+    <h1>Temporary Bunny Stream Video Test</h1>
+    <p class="note">This page is only for testing the Bunny Stream player.</p>
 
     <div class="video-container">
         <div class="video-wrapper">
             <iframe
-                allowtransparency="true"
-                src="https://videomanapp.com/frame/4ff4z/"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen>
+                src="https://player.mediadelivery.net/embed/702299/ca71d6ff-204d-40c0-8cf2-fe26ffa7564c?autoplay=false&loop=false&muted=false&preload=false&responsive=true"
+                loading="lazy"
+                allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;fullscreen;"
+                allowfullscreen="true">
             </iframe>
         </div>
     </div>
