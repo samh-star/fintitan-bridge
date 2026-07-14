@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="build-version" content="v31-fica-video-end-reset">
-    <title>Employer FICA Tip Credit — Restaurant Owners</title>
+    <meta name="build-version" content="v32-live-fintitan-handoff">
+    <title>Employer FICA Tip Credit - Restaurant Owners</title>
     <style>
         * {
             margin: 0;
@@ -486,7 +486,7 @@
             <h1>This May Be Worth Checking<br>If Your Restaurant Has<br><span>Tipped Employees</span></h1>
             <p style="color: #d0d4e0; margin-bottom: 24px;">Watch this short overview, or keep scrolling for the full explanation.</p>
 
-            <!-- VIDEO EMBED START — FINAL FICA BRIDGE VIDEO -->
+            <!-- VIDEO EMBED START - FINAL FICA BRIDGE VIDEO -->
             <div style="width: 100%; max-width: 960px; margin: 0 auto 32px; border: 2px solid #C9A227; border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); overflow: hidden; background: #000;">
                 <div style="position: relative; padding-top: 56.25%;">
                     <iframe
@@ -504,7 +504,7 @@
 
             <div style="max-width: 560px; margin: 0 auto; text-align: left; background: rgba(255,255,255,0.08); padding: 28px 32px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12);">
                 <p style="margin-bottom: 16px;">If your restaurant has tipped employees, there is a federal tax credit that may be worth asking about.</p>
-                <p style="margin-bottom: 16px;">Below, I'll walk through the FICA Tip Credit in plain English — what it is, why it can be missed, and why the review is more specialized than the basic idea.</p>
+                <p style="margin-bottom: 16px;">Below, I'll walk through the FICA Tip Credit in plain English - what it is, why it can be missed, and why the review is more specialized than the basic idea.</p>
                 <p style="margin-bottom: 0; color: #d0d4e0;">You do not have to figure this out on your own.</p>
             </div>
         </div>
@@ -707,10 +707,10 @@
 
                 <div class="confirmation" id="confirmation">
                     <div class="confirmation-icon">✓</div>
-                    <h3>Thank You — Your Request Was Saved</h3>
+                    <h3>Thank You — Your Information Was Saved</h3>
                     <p>Your information has been saved.</p>
-                    <p style="margin-top: 10px;">When this page is fully connected, the next step will be to continue to FinTitan’s page. FinTitan may ask you to confirm some of the same information and may ask a few additional questions so their team can explain what comes next.</p>
-                    <p style="margin-top: 10px;">For now, this page is still in test mode, so you have not been redirected.</p>
+                    <p style="margin-top: 10px;">You're being taken to FinTitan's page to continue. Their page will ask for some basic contact and restaurant information so they can provide a preliminary estimate and explain what comes next.</p>
+                    <p style="margin-top: 10px;">If the next page does not open automatically, <a href="https://fintitan.com/services/fica-tip-credit/schedule?referrer=SAM_HARDING">continue to FinTitan's page</a>.</p>
                 </div>
             </div>
         </div>
@@ -781,12 +781,12 @@
                 });
 
                 if (response.ok) {
-                    // FINAL REDIRECT PLAN: After saving the form submission, show a short confirmation message with a Continue to FinTitan button instead of auto-redirecting immediately.
-                    // TEST MODE: Show confirmation instead of redirect
-                    // TODO: When ready to go live, replace confirmation with:
-                    // window.location.href = 'https://fintitan.com/partner-referral?ref=samharding&lead=' + encodeURIComponent(email.value.trim());
                     document.getElementById('leadForm').style.display = 'none';
                     document.getElementById('confirmation').classList.add('show');
+
+                    setTimeout(function() {
+                        window.location.assign('https://fintitan.com/services/fica-tip-credit/schedule?referrer=SAM_HARDING');
+                    }, 1500);
                 } else {
                     btn.disabled = false;
                     btn.textContent = 'Send My Request';
